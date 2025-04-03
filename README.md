@@ -1,56 +1,56 @@
-# Shadow Studio Agency - Official Website
+# 🚀 Shadow Studio Agency - Official Website
 
 ![Shadow Studio Preview](https://raw.githubusercontent.com/ShadowStudio-no1/Office-Website/refs/heads/main/res/images/hosting/Screenshot%202025-04-03%20215110.png)
 
-## 🚀 Overview
-This is the official website of Shadow Studio Agency, showcasing our digital innovation and services. It is a modern, responsive, and SEO-friendly website that provides clients with information about our services, portfolio, and contact details.
+## 📌 About
+Shadow Studio Agency is a cutting-edge digital solutions provider specializing in web development, mobile applications, and digital marketing. This official website serves as a gateway to our services, portfolio, and client engagement channels.
 
-## 🌟 Features
-- **Modern UI/UX:** Attractive and user-friendly interface
-- **Fully Responsive:** Optimized for mobile, tablet, and desktop
-- **Fast & Optimized:** Lightweight and fast loading speed
-- **SEO-Friendly:** Follows on-page SEO best practices
-- **Contact Form Integration:** Allows direct inquiries
-- **Dark & Light Mode (Optional):** Enhances user experience
+## ✨ Key Features
+- 🎨 **Sleek & Modern UI/UX** – Designed for an intuitive user experience
+- 📱 **Fully Responsive** – Optimized for all screen sizes
+- ⚡ **Fast & Performance-Driven** – Lightweight with quick load times
+- 🔍 **SEO-Optimized** – Implements best practices for search engine ranking
+- 📩 **Integrated Contact Forms** – For seamless client inquiries
+- 🌙 **Dark & Light Mode** – Enhanced accessibility and user comfort
 
-## 🛠️ Tech Stack
+## 🏗️ Tech Stack
 - **Frontend:** HTML, CSS, JavaScript
-- **Frameworks:** Bootstrap
-- **Deployment:** GitHub Pages
+- **Frameworks & Libraries:** Bootstrap, Font Awesome
+- **Hosting & Deployment:** GitHub Pages
 
-## 📂 Folder Structure
+## 📂 Project Structure
 ```
 📦 Office-Website
 ├── 📂 assets
-│   ├── 📂 css
-│   ├── 📂 images
-│   ├── 📂 js
-│   └── 📂 fonts
-├── 📜 index.html
-├── 📜 about.html
-├── 📜 services.html
-├── 📜 contact.html
-└── 📜 README.md
+│   ├── 📂 css      # Stylesheets
+│   ├── 📂 images   # Media assets
+│   ├── 📂 js       # JavaScript files
+│   └── 📂 fonts    # Custom fonts
+├── 📜 index.html     # Homepage
+├── 📜 about.html     # About Us Page
+├── 📜 services.html  # Services Page
+├── 📜 contact.html   # Contact Page
+└── 📜 README.md      # Documentation
 ```
 
-## 🔧 Installation & Setup
+## 🔧 Setup & Installation
 ```bash
 # Clone the repository
 git clone https://github.com/shadowstudio-no1/Office-Website.git
 
-# Navigate into the project directory
+# Navigate to the project folder
 cd Office-Website
 
-# Open in browser
-open index.html  # or just drag and drop the file into a browser
+# Open in browser (or manually open index.html)
+open index.html 
 ```
 
 ## 📸 Website Preview
 ![Website Preview](https://raw.githubusercontent.com/ShadowStudio-no1/Office-Website/refs/heads/main/res/images/hosting/Screenshot%202025-04-03%20215110.png)
 
-## 📬 Contact Us
-🔗 **Website:** [Shadow Studio Agency](https://shadowstudio-no1.github.io/Office-Website/)  
-📧 **Email:** shadowstudio412@gmail.com
+## 📞 Contact & Support
+📌 **Website:** [Shadow Studio Agency](https://shadowstudio-no1.github.io/Office-Website/)  
+📧 **Email:** [shadowstudio412@gmail.com](mailto:shadowstudio412@gmail.com)  
 📱 **Phone:** +91 6205012057  
 💬 **WhatsApp:** [Chat Now](https://wa.me/916205012057)
 
