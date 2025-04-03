@@ -56,7 +56,6 @@ open index.html
 ## 📞 Contact & Support
 📌 **Website:** [Shadow Studio Agency](https://shadowstudio-no1.github.io/Office-Website/)  
 📧 **Email:** [shadowstudio412@gmail.com](mailto:shadowstudio412@gmail.com)  
-📱 **Phone:** +91 6205012057  
 💬 **WhatsApp:** [Chat Now](https://wa.me/916205012057)
 
 ---
