@@ -49,10 +49,10 @@ open index.html  # or just drag and drop the file into a browser
 ![Website Preview](https://shadowstudio-no1.github.io/Office-Website/assets/images/preview.png)
 
 ## 📬 Contact Us
-🔗 **Website:** [Shadow Studio Agency](https://shadowstudio-no1.github.io/Office-Website/)  
-📧 **Email:** contact@shadowstudio.com  
-📱 **Phone:** +91 9876543210  
-💬 **WhatsApp:** [Chat Now](https://wa.me/919876543210)
+🔗 **Website:** [Shadow Studio Agency]([https://shadowstudio-no1.github.io/Office-Website/](https://shadowstudio-no1.github.io/Office-Website/))  
+📧 **Email:** shadowstudio412@gmail.com
+📱 **Phone:** +91 6205012057  
+💬 **WhatsApp:** [Chat Now](https://wa.me/916205012057)
 
 ---
 
