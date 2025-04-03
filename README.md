@@ -1,6 +1,6 @@
 # Shadow Studio Agency - Official Website
 
-![Shadow Studio Preview]([https://shadowstudio-no1.github.io/Office-Website/assets/images/preview.png](https://raw.githubusercontent.com/ShadowStudio-no1/Office-Website/refs/heads/main/res/images/hosting/Screenshot%202025-04-03%20215110.png))
+![Shadow Studio Preview](https://raw.githubusercontent.com/ShadowStudio-no1/Office-Website/refs/heads/main/res/images/hosting/Screenshot%202025-04-03%20215110.png)
 
 ## 🚀 Overview
 This is the official website of Shadow Studio Agency, showcasing our digital innovation and services. It is a modern, responsive, and SEO-friendly website that provides clients with information about our services, portfolio, and contact details.
@@ -46,10 +46,10 @@ open index.html  # or just drag and drop the file into a browser
 ```
 
 ## 📸 Website Preview
-![Website Preview]([https://shadowstudio-no1.github.io/Office-Website/assets/images/preview.png](https://raw.githubusercontent.com/ShadowStudio-no1/Office-Website/refs/heads/main/res/images/hosting/Screenshot%202025-04-03%20215110.png))
+![Website Preview](https://raw.githubusercontent.com/ShadowStudio-no1/Office-Website/refs/heads/main/res/images/hosting/Screenshot%202025-04-03%20215110.png)
 
 ## 📬 Contact Us
-🔗 **Website:** [Shadow Studio Agency]([https://shadowstudio-no1.github.io/Office-Website/](https://shadowstudio-no1.github.io/Office-Website/))  
+🔗 **Website:** [Shadow Studio Agency](https://shadowstudio-no1.github.io/Office-Website/)  
 📧 **Email:** shadowstudio412@gmail.com
 📱 **Phone:** +91 6205012057  
 💬 **WhatsApp:** [Chat Now](https://wa.me/916205012057)
