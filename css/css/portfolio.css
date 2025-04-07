@@ -1,0 +1,312 @@
+/* Portfolio Section Styles */
+.portfolio-section {
+  position: relative;
+  padding: var(--section-padding);
+  overflow: hidden;
+  background: #0a0b1a;
+}
+
+.portfolio-container {
+  max-width: 2560px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--text-light);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #12142e;
+}
+
+.portfolio-image {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Title and description container */
+.portfolio-overlay-content {
+  background: rgba(21, 67, 192, 0.95);
+  padding: 1.2rem 1.5rem;
+  width: 100%;
+}
+
+.portfolio-overlay h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.portfolio-overlay p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.portfolio-tech {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+  margin: 1rem 0;
+}
+
+.portfolio-tech span {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.portfolio-preview {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(70, 130, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  transform: scale(0) rotate(-45deg);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  z-index: 5;
+}
+
+.portfolio-card:hover .portfolio-preview {
+  transform: scale(1) rotate(0);
+}
+
+.portfolio-preview:hover {
+  background: rgba(70, 130, 255, 0.4);
+  transform: scale(1.15) rotate(0);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-preview::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.portfolio-preview:hover::after {
+  opacity: 1;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.portfolio-content {
+  padding: 1.5rem;
+}
+
+.portfolio-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.portfolio-content p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.portfolio-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.3s ease;
+}
+
+.portfolio-link:hover {
+  gap: 0.75rem;
+}
+
+.portfolio-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+/* Background Circles */
+.bg-circle-3 {
+  top: -10%;
+  right: -5%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
+}
+
+.bg-circle-4 {
+  bottom: -10%;
+  left: -5%;
+  background: radial-gradient(circle, rgba(252, 96, 103, 0.2), transparent 70%);
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-filters {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .portfolio-tech {
+    gap: 0.4rem;
+  }
+  
+  .portfolio-tech span {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .portfolio-view-case {
+    margin: 1rem;
+  }
+}
+
+.portfolio-view-case {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  background: rgba(21, 67, 192, 0.95);
+  border-radius: 100px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  min-width: 180px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  align-self: center;
+}
+
+.portfolio-view-case:hover {
+  background: rgba(30, 80, 220, 0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-view-case i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-view-case:hover i {
+  transform: translateX(5px);
+}

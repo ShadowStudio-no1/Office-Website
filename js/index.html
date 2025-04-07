@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script disable-devtool-auto="true" src="https://cdn.jsdelivr.net/npm/disable-devtool" clear-log="true" disable-select="true" disable-copy="true" disable-cut="true" disable-paste="true"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow Studio - Digital Innovation Agency</title>
+    <meta name="description" content="Shadow Studio - Transform your vision into reality with our expert web development, mobile app, and digital solutions.">
+    <link rel="icon" type="image/png" href="res/logo.png">
+    
+    <!-- Critical CSS -->
+    <style>
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0a0a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        transition: opacity 0.3s ease-out;
+      }
+      .loader {
+        width: 40px;
+        height: 40px;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        border-top: 3px solid #6366f1;
+        border-bottom: 3px solid #fc6067;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      body.loading { overflow: hidden; }
+    </style>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="scroll-bar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/mega-menu.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="link-fixes.css" />
+  </head>
+  <body class="loading">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <main>
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="container nav-container">
+          <div class="nav-brand">
+            <a href="#home" class="logo">
+              <img src="res/logo.png" alt="Shadow Studio" class="logo-img">
+              <span class="logo-text">Shadow Studio</span>
+            </a>
+          </div>
+
+          <div class="nav-menu">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#home" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#services" class="nav-link">Services</a>
+                <div class="mega-menu">
+                  <div class="mega-menu-grid">
+                    <div class="mega-menu-column">
+                      <h3 class="mega-menu-title"><i class="ri-code-line"></i> Web Development</h3>
+                      <ul class="mega-menu-list">
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-html5-line"></i>
+                            Frontend Development
+                          </a>
+                        </li>
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-database-2-line"></i>
+                            Backend Development
+                          </a>
+                        </li>
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-shoppin g-cart-line"></i>
+                            E-commerce Solutions 
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mega-menu-column">
+                      <h3 class="mega-menu-title"><i class="ri-smartphone-line"></i> Mobile Apps</h3>
+                      <ul class="mega-menu-list">
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-android-line"></i>
+                            Android Development
+                          </a>
+                        </li>
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-apple-line"></i>
+                            iOS Development
+                          </a>
+                        </li>
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-reactjs-line"></i>
+                            Cross-platform Apps
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mega-menu-column">
+                      <div class="mega-menu-featured">
+                        <h4 class="featured-title">Featured Project</h4>
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-19%20at%2010.09.30_c2001747.jpg-EeLiU2loFcKCuavkspWIbKGD0XxbNt.jpeg" alt="Featured Project" class="featured-image">
+                        <a href="#portfolio" class="featured-link">
+                          <i class="ri-arrow-right-up-line"></i>
+                          View Our Portfolio
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <div class="mega-menu">
+                  <div class="mega-menu-grid">
+                    <div class="mega-menu-column">
+                      <h3 class="mega-menu-title"><i class="ri-folder-line"></i> Categories</h3>
+                      <ul class="mega-menu-list">
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-window-line"></i>
+                            Web Applications
+                          </a>
+                        </li>
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-smartphone-line"></i>
+                            Mobile Apps
+                          </a>
+                        </li>
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-store-line"></i>
+                            E-commerce
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mega-menu-column">
+                      <h3 class="mega-menu-title"><i class="ri-award-line"></i> Featured Work</h3>
+                      <ul class="mega-menu-list">
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-star-line"></i>
+                            Latest Projects
+                          </a>
+                        </li>
+                        <li class="mega-menu-item">
+                          <a href="#" class="mega-menu-link">
+                            <i class="ri-trophy-line"></i>
+                            Award-winning Work
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mega-menu-column">
+                      <div class="mega-menu-featured">
+                        <h4 class="featured-title">Featured Project</h4>
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-19%20at%2010.09.30_c2001747.jpg-EeLiU2loFcKCuavkspWIbKGD0XxbNt.jpeg" alt="Featured Project" class="featured-image">
+                        <a href="#portfolio" class="featured-link">
+                          <i class="ri-arrow-right-up-line"></i>
+                          View Latest Work
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-cta">
+              <a href="#contact" class="nav-btn">
+                <span class="btn-text">Start Project</span>
+                <span class="btn-icon"><i class="ri-arrow-right-up-line"></i></span>
+              </a>
+            </div>
+          </div>
+
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="hero-video-wrapper">
+          <video class="hero-video" autoplay loop muted playsinline>
+            <source src="res/hero.webm" type="video/webm">
+          </video>
+          <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
+              <div class="hero-badge-wrapper">
+                <div class="hero-badge glass-effect" data-aos="fade-right" data-aos-delay="400">
+                  <i class="ri-rocket-line"></i>
+                  <span>Digital Innovation Agency</span>
+                </div>
+                <div class="hero-badge glass-effect" data-aos="fade-right" data-aos-delay="600">
+                  <i class="ri-code-box-line"></i>
+                  <span>Modern Web Solutions</span>
+                </div>
+              </div>
+
+              <div class="hero-heading-wrapper">
+                <h1 class="hero-title">
+                  <span class="gradient-text">Transform</span>
+                  <span class="text-reveal">Your Digital Vision</span>
+                  <span class="gradient-text">Into Reality</span>
+                </h1>
+                <p class="hero-subtitle">Creating exceptional digital experiences that inspire and innovate</p>
+              </div>
+
+              <div class="hero-cta-wrapper">
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+                  <a href="#contact" class="primary-btn">
+                    <div class="btn-content">
+                      <div class="btn-glow"></div>
+                      <span class="btn-text">Start Your Project</span>
+                      <span class="btn-icon"><i class="ri-arrow-right-up-line"></i></span>
+                    </div>
+                    <div class="btn-particles"></div>
+                  </a>
+                  <a href="#portfolio" class="outline-btn glass-effect">
+                    <div class="btn-content">
+                      <span class="btn-text">Explore Work</span>
+                      <span class="btn-icon"><i class="ri-eye-line"></i></span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="hero-features" data-aos="fade-up" data-aos-delay="1000">
+                  <div class="feature-item glass-effect">
+                    <div class="feature-icon">
+                      <i class="ri-code-s-slash-fill"></i>
+                    </div>
+                    <div class="feature-text">
+                      <h3>Modern Tech</h3>
+                      <p>Latest Technologies</p>
+                    </div>
+                  </div>
+                  <div class="feature-item glass-effect">
+                    <div class="feature-icon">
+                      <i class="ri-timer-line"></i>
+                    </div>
+                    <div class="feature-text">
+                      <h3>Fast Delivery</h3>
+                      <p>Quick Turnaround</p>
+                    </div>
+                  </div>
+                  <div class="feature-item glass-effect">
+                    <div class="feature-icon">
+                      <i class="ri-shield-star-line"></i>
+                    </div>
+                    <div class="feature-text">
+                      <h3>Quality First</h3>
+                      <p>Best-in-class</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4 floating"></div>
+          <div class="shape shape-5 floating"></div>
+        </div>
+
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrows">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services-section">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+        
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-tag"><i class="ri-rocket-line"></i>Our Services</span>
+            <h2 class="gradient-text">Transform Your Digital Presence</h2>
+            <p>We deliver cutting-edge solutions that help businesses thrive in the digital age</p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Web Development -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8659f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 18l6-6-6-6"></path>
+                  <path d="M8 6l-6 6 6 6"></path>
+                </svg>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Web Development</h3>
+                <p class="service-description">Create stunning, responsive websites that engage your audience and drive results.</p>
+                <ul class="service-features">
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">Custom Website Development</span>
+                  </li>
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">E-commerce Solutions</span>
+                  </li>
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">Progressive Web Apps</span>
+                  </li>
+                </ul>
+                <div class="service-cta">
+                  <a href="#contact" class="service-btn">
+                    Learn More <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile App Development -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8659f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12" y2="18"></line>
+                </svg>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Mobile Apps</h3>
+                <p class="service-description">Build powerful, user-friendly mobile applications that deliver exceptional experiences.</p>
+                <ul class="service-features">
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">iOS Development</span>
+                  </li>
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">Android Development</span>
+                  </li>
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">Cross-platform Solutions</span>
+                  </li>
+                </ul>
+                <div class="service-cta">
+                  <a href="#contact" class="service-btn">
+                    Learn More <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Digital Marketing -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8659f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Digital Marketing</h3>
+                <p class="service-description">Boost your online presence and reach your target audience effectively.</p>
+                <ul class="service-features">
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">SEO Optimization</span>
+                  </li>
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">Social Media Marketing</span>
+                  </li>
+                  <li class="feature-item">
+                    <i class="ri-check-double-line feature-icon"></i>
+                    <span class="feature-text">Content Strategy</span>
+                  </li>
+                </ul>
+                <div class="service-cta">
+                  <a href="#contact" class="service-btn">
+                    Learn More <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio-section">
+        <div class="bg-circle bg-circle-3"></div>
+        <div class="bg-circle bg-circle-4"></div>
+        
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag"><i class="ri-gallery-line"></i>Our Work</span>
+          <h2 class="gradient-text">Featured Projects</h2>
+          <p>Explore our latest work and see how we help businesses achieve their digital goals.</p>
+        </div>
+
+        <div class="portfolio-container">
+          <div class="portfolio-grid" data-aos="fade-up">
+            <!-- clashwar -->
+            <div class="portfolio-item">
+              <div class="portfolio-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-19%20at%2010.09.30_c2001747.jpg-EeLiU2loFcKCuavkspWIbKGD0XxbNt.jpeg" alt="Shadow Play ESports" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-overlay-content">
+                    <h3>Shadow Play ESports</h3>
+                    <p>ESports platform for Battle Royale games</p>
+                  </div>
+                  <a href="https://clashwar.in/" class="portfolio-view-case" target="_blank">
+                    View Case Study <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- News Express App -->
+            <div class="portfolio-item">
+              <div class="portfolio-image">
+                <img src="https://raw.githubusercontent.com/ShadowStudio-no1/Full-Stack-News_App/refs/heads/main/images/privew1.png" alt="News Express - Full Stack News App" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-overlay-content">
+                    <h3>News Express App</h3>
+                    <p>Full-stack news application with live TV streaming</p>
+                  </div>
+                  <a href="https://github.com/ShadowStudio-no1/Full-Stack-News_App" class="portfolio-view-case" target="_blank">
+                    View Case Study <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reconnect Platform -->
+            <div class="portfolio-item">
+              <div class="portfolio-image">
+                <img src="res/Reconect.png" alt="Reconnect - Family Reunification Platform" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-overlay-content">
+                    <h3>Reconnect Platform</h3>
+                    <p>Family reunification platform for missing persons</p>
+                  </div>
+                  <a href="https://reconnect-2v1i.onrender.com/" class="portfolio-view-case" target="_blank">
+                    View Case Study <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fitness Tracker App -->
+            <!-- <div class="portfolio-item">
+              <div class="portfolio-image">
+                <img src="res/projects/project2.jpg" alt="Fitness App" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-overlay-content">
+                    <h3>Fitness Tracker App</h3>
+                    <p>AI-powered workout companion</p>
+                  </div>
+                  <a href="https://shadow-studio.com/case-studies/fitness-tracker" class="portfolio-view-case" target="_blank">
+                    View Case Study <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Tech Brand Identity -->
+            <!-- <div class="portfolio-item">
+              <div class="portfolio-image">
+                <img src="res/projects/project3.jpg" alt="Brand Identity" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-overlay-content">
+                    <h3>Tech Brand Identity</h3>
+                    <p>Complete brand transformation</p>
+                  </div>
+                  <a href="https://shadow-studio.com/case-studies/tech-brand" class="portfolio-view-case" target="_blank">
+                    View Case Study <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="portfolio-cta" data-aos="fade-up">
+            <a href="#contact" class="primary-btn">
+              <span>View Full Portfolio</span>
+              <i class="ri-arrow-right-up-line"></i>
+              <div class="btn-glow"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="bg-circle bg-circle-5"></div>
+        <div class="bg-circle bg-circle-6"></div>
+        
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-tag"><i class="ri-customer-service-2-line"></i>Client Stories</span>
+            <h2 class="gradient-text">What Our Clients Say</h2>
+            <p>Discover how we've helped businesses transform their digital presence and achieve remarkable results.</p>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="testimonials-stats" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-item">
+              <i class="ri-star-smile-line"></i>
+              <div class="stat-content">
+                <h3 class="counter" data-target="98">0</h3>
+                <p>Client Satisfaction</p>
+              </div>
+            </div>
+            <div class="stat-item">
+              <i class="ri-rocket-line"></i>
+              <div class="stat-content">
+                <h3 class="counter" data-target="150">0</h3>
+                <p>Projects Completed</p>
+              </div>
+            </div>
+            <div class="stat-item">
+              <i class="ri-award-line"></i>
+              <div class="stat-content">
+                <h3 class="counter" data-target="25">0</h3>
+                <p>Awards Won</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonials Slider -->
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="400">
+            <div class="swiper-wrapper">
+              <!-- Testimonial 1 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card glass-card">
+                  <div class="testimonial-header">
+                    <div class="client-info">
+                      <div class="client-avatar">
+                        <img src="res/logo.png" alt="Sarah Johnson" loading="lazy">
+                      </div>
+                      <div class="client-details">
+                        <h4>Sarah Johnson</h4>
+                        <p class="project-type">Web Development</p>
+                      </div>
+                    </div>
+                    <div class="rating" aria-label="5 out of 5 stars">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                  </div>
+                  <blockquote class="testimonial-content">
+                    <p>"Shadow Studio transformed our online presence with a stunning website that perfectly captures our brand. Their attention to detail and innovative approach exceeded our expectations."</p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card glass-card">
+                  <div class="testimonial-header">
+                    <div class="client-info">
+                      <div class="client-avatar">
+                        <img src="res/logo.png" alt="Michael Chen" loading="lazy">
+                      </div>
+                      <div class="client-details">
+                        <h4>Michael Chen</h4>
+                        <p class="project-type">Mobile App Development</p>
+                      </div>
+                    </div>
+                    <div class="rating" aria-label="5 out of 5 stars">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                  </div>
+                  <blockquote class="testimonial-content">
+                    <p>"The mobile app they developed for us has revolutionized how we interact with our customers. Their technical expertise and creative solutions are unmatched."</p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card glass-card">
+                  <div class="testimonial-header">
+                    <div class="client-info">
+                      <div class="client-avatar">
+                        <img src="res/logo.png" alt="Emma Davis" loading="lazy">
+                      </div>
+                      <div class="client-details">
+                        <h4>Emma Davis</h4>
+                        <p class="project-type">E-commerce Solution</p>
+                      </div>
+                    </div>
+                    <div class="rating" aria-label="5 out of 5 stars">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                  </div>
+                  <blockquote class="testimonial-content">
+                    <p>"Our e-commerce sales have doubled since implementing Shadow Studio's solution. Their team's expertise in UX design and technical implementation is remarkable."</p>
+                  </blockquote>
+                </div>
+              </div>
+              
+              <!-- Testimonial 4 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card glass-card">
+                  <div class="testimonial-header">
+                    <div class="client-info">
+                      <div class="client-avatar">
+                        <img src="res/logo.png" alt="Robert Wilson" loading="lazy">
+                      </div>
+                      <div class="client-details">
+                        <h4>Robert Wilson</h4>
+                        <p class="project-type">UI/UX Design</p>
+                      </div>
+                    </div>
+                    <div class="rating" aria-label="5 out of 5 stars">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                  </div>
+                  <blockquote class="testimonial-content">
+                    <p>"The UI/UX design provided by Shadow Studio completely transformed our application. User engagement increased by 40% within the first month after launch."</p>
+                  </blockquote>
+                </div>
+              </div>
+              
+              <!-- Testimonial 5 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card glass-card">
+                  <div class="testimonial-header">
+                    <div class="client-info">
+                      <div class="client-avatar">
+                        <img src="res/logo.png" alt="Jennifer Lopez" loading="lazy">
+                      </div>
+                      <div class="client-details">
+                        <h4>Jennifer Lopez</h4>
+                        <p class="project-type">Digital Marketing</p>
+                      </div>
+                    </div>
+                    <div class="rating" aria-label="5 out of 5 stars">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                  </div>
+                  <blockquote class="testimonial-content">
+                    <p>"Shadow Studio's digital marketing strategy helped us reach new audiences we never thought possible. Their data-driven approach delivered measurable results."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination and Navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Creative Section -->
+      <section id="creative" class="creative-section">
+        <div class="bg-circle bg-circle-7"></div>
+        <div class="bg-circle bg-circle-8"></div>
+        
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-tag"><i class="ri-palette-line"></i>Creative Process</span>
+            <h2 class="gradient-text">How We Bring Ideas to Life</h2>
+            <p>Our creative process is designed to transform your vision into reality through a series of carefully crafted steps.</p>
+          </div>
+
+          <div class="creative-grid">
+            <!-- Step 1 -->
+            <div class="creative-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-icon">
+                <i class="ri-lightbulb-flash-line"></i>
+                <span class="step-number">01</span>
+              </div>
+              <h3>Discovery & Strategy</h3>
+              <p>We dive deep into your business goals, target audience, and market position to craft a tailored strategy.</p>
+              <div class="card-hover">
+                <ul class="process-list">
+                  <li><i class="ri-check-line"></i>Market Research</li>
+                  <li><i class="ri-check-line"></i>User Analysis</li>
+                  <li><i class="ri-check-line"></i>Strategic Planning</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="creative-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="card-icon">
+                <i class="ri-pencil-ruler-2-line"></i>
+                <span class="step-number">02</span>
+              </div>
+              <h3>Design & Prototype</h3>
+              <p>Our designers create stunning visuals and interactive prototypes that bring your brand to life.</p>
+              <div class="card-hover">
+                <ul class="process-list">
+                  <li><i class="ri-check-line"></i>UI/UX Design</li>
+                  <li><i class="ri-check-line"></i>Brand Identity</li>
+                  <li><i class="ri-check-line"></i>Interactive Mockups</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="creative-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-icon">
+                <i class="ri-code-box-line"></i>
+                <span class="step-number">03</span>
+              </div>
+              <h3>Development</h3>
+              <p>We transform designs into fully functional digital experiences using cutting-edge technologies.</p>
+              <div class="card-hover">
+                <ul class="process-list">
+                  <li><i class="ri-check-line"></i>Clean Code</li>
+                  <li><i class="ri-check-line"></i>Modern Tech Stack</li>
+                  <li><i class="ri-check-line"></i>Performance Focus</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="creative-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="card-icon">
+                <i class="ri-rocket-2-line"></i>
+                <span class="step-number">04</span>
+              </div>
+              <h3>Launch & Growth</h3>
+              <p>We ensure a smooth launch and provide ongoing support to help your project thrive.</p>
+              <div class="card-hover">
+                <ul class="process-list">
+                  <li><i class="ri-check-line"></i>Quality Assurance</li>
+                  <li><i class="ri-check-line"></i>Performance Monitoring</li>
+                  <li><i class="ri-check-line"></i>Continuous Support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="creative-cta" data-aos="fade-up" data-aos-delay="500">
+            <h3>Ready to Start Your Project?</h3>
+            <a href="#contact" class="primary-btn">
+              <span>Let's Create Together</span>
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-tag"><i class="ri-message-3-line"></i>Get in Touch</span>
+            <h2 class="gradient-text">Let's Start a Conversation</h2>
+            <p>Have a project in mind? We'd love to hear about it. Drop us a line and let's create something amazing together.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="200">
+              <form id="contactForm" class="contact-form" onsubmit="return false;">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="name" placeholder=" " required>
+                  <label for="name" class="form-label">Your Name</label>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" placeholder=" " required>
+                  <label for="email" class="form-label">Email Address</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="subject" placeholder=" " required>
+                  <label for="subject" class="form-label">Subject</label>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" id="message" rows="5" placeholder=" " required></textarea>
+                  <label for="message" class="form-label">Your Message</label>
+                </div>
+                <button type="submit" class="primary-btn">
+                  Send Message
+                  <i class="ri-send-plane-line"></i>
+                  <div class="btn-glow"></div>
+                </button>
+              </form>
+            </div>
+
+            <div class="contact-info">
+              <!-- <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="contact-card-icon">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <h3>Visit Us</h3>
+                <p>123 Innovation Street<br>Silicon Valley, CA 94025</p>
+                <a href="https://goo.gl/maps" target="_blank" class="contact-cta">
+                  Get Directions <i class="ri-arrow-right-line"></i>
+                </a>
+              </div> -->
+
+              <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="contact-card-icon">
+                  <i class="ri-customer-service-2-line"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>Have a quick question? Give us a call!</p>
+                <a href="tel:+918252634730" class="contact-cta">
+                  +91 8252634730 <i class="ri-phone-line"></i>
+                </a>
+              </div>
+
+              <div class="contact-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="contact-card-icon">
+                  <i class="ri-whatsapp-line"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Chat with us on WhatsApp for instant support.</p>
+                <a href="https://wa.me/+918252634730?text=Hi!%20I'm%20interested%20in%20your%20product.%20Can%20you%20tell%20me%20more%20about%20features%20and%20pricing%3F" target="_blank" class="contact-cta">
+                  Start Chat <i class="ri-whatsapp-line"></i>
+                </a>
+              </div>
+
+              <div class="social-links" data-aos="fade-up" data-aos-delay="600">
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <i class="ri-twitter-fill"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i class="ri-instagram-line"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-wrapper" data-aos="fade-up" data-aos-delay="700">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1354.1314544438503!2d84.89764218693517!3d25.647886767320898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992ab006e2fda8f%3A0xdd32ee772a04b269!2sManer!5e0!3m2!1sen!2sin!4v1743876046843!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+              title="Office Location"
+              aria-label="Google Maps showing our office location">
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Theme Toggle -->
+      <div class="theme-toggle-wrapper">
+        <a href="https://wa.me/+918252634730?text=Hi!%20I'm%20interested%20in%20your%20product.%20Can%20you%20tell%20me%20more%20about%20features%20and%20pricing%3F" class="theme-toggle" aria-label="Toggle theme">
+          <i class="ri-whatsapp-line"></i>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a href="#home" class="footer-logo">
+                <img src="res/logo.png" alt="Shadow Studio" />
+                <span class="footer-logo-text">Shadow Studio</span>
+              </a>
+              <p class="footer-description">
+                We are a digital innovation agency passionate about creating exceptional digital experiences that help businesses thrive in the modern world.
+              </p>
+              <div class="footer-social">
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <i class="ri-twitter-fill"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i class="ri-instagram-line"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <div class="footer-links">
+                <a href="#home" class="footer-link">
+                  <i class="ri-arrow-right-s-line"></i> Home
+                </a>
+                <a href="#services" class="footer-link">
+                  <i class="ri-arrow-right-s-line"></i> Services
+                </a>
+                <a href="#portfolio" class="footer-link">
+                  <i class="ri-arrow-right-s-line"></i> Portfolio
+                </a>
+                <a href="#testimonials" class="footer-link">
+                  <i class="ri-arrow-right-s-line"></i> Testimonials
+                </a>
+                <a href="#contact" class="footer-link">
+                  <i class="ri-arrow-right-s-line"></i> Contact
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-column">
+              <h4>Services</h4>
+              <div class="footer-links">
+                <a href="#" class="footer-link">
+                  <i class="ri-code-line"></i> Web Development
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="ri-android-line"></i> Mobile Apps
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="ri-palette-line"></i> UI/UX Design
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="ri-cloud-line"></i> Cloud Solutions
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="ri-customer-service-2-line"></i> IT Consulting
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p class="footer-copyright">
+              &copy; <span id="currentYear">2025</span> Shadow Studio. All rights reserved.
+            </p>
+            <div class="footer-links-bottom">
+              <a href="#" class="footer-link-bottom">Privacy Policy</a>
+              <a href="#" class="footer-link-bottom">Terms of Service</a>
+              <a href="#" class="footer-link-bottom">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      // Update current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Shadow Studio",
+      "url": "https://www.shadowlink.in",
+      "logo": "res/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8252634730",
+        "contactType": "customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maner, Patna, Bihar, India, 801108",
+        "addressLocality": "Patna",
+        "addressRegion": "BR",
+        "postalCode": "801108",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/shadowstudio",
+        "https://twitter.com/shadowstudio",
+        "https://www.instagram.com/shadowstudio",
+        "https://www.linkedin.com/company/shadowstudio"
+      ]
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+/* Remove underlines from buttons and social icons */
+.primary-btn,
+.outline-btn,
+.portfolio-link,
+.view-project,
+.social-link,
+.nav-btn {
+  text-decoration: none !important;
+} 

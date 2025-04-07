@@ -1,0 +1,302 @@
+/* Modern Services Section Styles */
+.services-section {
+  position: relative;
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.12;
+  z-index: 0;
+}
+
+.bg-circle-1 {
+  width: 800px;
+  height: 800px;
+  background: #6366f1;
+  top: -300px;
+  left: -200px;
+  animation: float 15s ease-in-out infinite;
+}
+
+.bg-circle-2 {
+  width: 600px;
+  height: 600px;
+  background: #fc6067;
+  bottom: -100px;
+  right: -100px;
+  animation: float 15s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-30px, 30px) rotate(5deg); }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+}
+
+.service-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(252, 96, 103, 0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  width: 250%;
+  height: 250%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  top: -75%;
+  left: -75%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-100%, -100%) rotate(45deg);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(99, 102, 241, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+  transform: translate(0, 0) rotate(45deg);
+}
+
+.service-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover .service-icon-wrapper {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* SVG icons styling */
+.service-icon-wrapper svg {
+  width: 40px;
+  height: 40px;
+  color: #8659f7;
+  stroke: #8659f7;
+  stroke-width: 2;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrapper svg {
+  transform: scale(1.1);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #8659f7;
+  transition: all 0.3s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Ensure remix icons are properly displayed */
+.ri-code-box-line,
+.ri-smartphone-line,
+.ri-bar-chart-box-line {
+  font-size: 2.5rem;
+  color: #8659f7;
+}
+
+.service-content {
+  position: relative;
+  z-index: 1;
+}
+
+.service-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.service-description {
+  font-family: 'Inter', sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateX(8px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.2));
+}
+
+.feature-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+.service-cta {
+  margin-top: auto;
+  width: 100%;
+}
+
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(90deg, #8659f7 0%, #fc6076 100%);
+  border-radius: 100px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(134, 89, 247, 0.25);
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.service-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(134, 89, 247, 0.35);
+}
+
+.service-btn i {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.service-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Dark Mode Optimization */
+@media (prefers-color-scheme: dark) {
+  .service-card {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .service-icon {
+    filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.4));
+  }
+
+  .feature-icon {
+    filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .services-section {
+    padding: 4rem 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+  }
+
+  .service-btn {
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 2560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

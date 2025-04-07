@@ -1,0 +1,336 @@
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor.hover {
+  width: 40px;
+  height: 40px;
+  border-color: var(--secondary);
+  background: rgba(252, 96, 103, 0.1);
+}
+
+.cursor-follower.hover {
+  width: 16px;
+  height: 16px;
+  background: var(--secondary);
+}
+
+.cursor.click {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.cursor-follower.click {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 0;
+}
+
+/* Preloader Animation */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--primary);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Gradient Text Animation */
+.gradient-text {
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Service Card Hover Effects */
+.service-card {
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon i {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .service-icon i {
+  transform: rotateY(360deg);
+}
+
+/* Portfolio Card Hover Effects */
+.portfolio-card {
+  transform: translateY(0) scale(1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.portfolio-content {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover .portfolio-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Button Hover Effects */
+.primary-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.primary-btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* Navigation Link Hover Effects */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Stats Counter Animation */
+.stat-number {
+  display: inline-block;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-number.counting {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+/* Notification Animation */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-md);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transform: translateX(120%);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999;
+}
+
+.notification.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.notification.success {
+  border-left: 4px solid #10B981;
+}
+
+.notification.error {
+  border-left: 4px solid #EF4444;
+}
+
+.notification i {
+  font-size: 1.5rem;
+}
+
+.notification.success i {
+  color: #10B981;
+}
+
+.notification.error i {
+  color: #EF4444;
+}
+
+/* Form Input Focus Effects */
+.form-group input,
+.form-group textarea {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  transform: translateY(-2px);
+}
+
+/* Testimonial Card Animation */
+.testimonial-card {
+  transform: scale(0.95);
+  opacity: 0.5;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-slide-active .testimonial-card {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Client Avatar Animation */
+.client-avatar {
+  position: relative;
+  overflow: hidden;
+}
+
+.client-avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-card:hover .client-avatar::before {
+  opacity: 0.2;
+}
+
+/* Mobile Menu Animation */
+.nav-menu {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    transform: translateX(100%);
+  }
+  
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+}
+
+/* Theme Toggle Animation */
+.theme-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle i {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .theme-toggle .light-icon {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+[data-theme="dark"] .theme-toggle .dark-icon {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.theme-toggle .light-icon {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.theme-toggle .dark-icon {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.1s linear;
+  z-index: 9999;
+}
